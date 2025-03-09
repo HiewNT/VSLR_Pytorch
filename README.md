@@ -36,8 +36,9 @@ VSLR_Pytorch/
 │   ├── utils.py                           # Utility functions
 ├── trained_models/                        # Pre-trained models and parameters
 ├── inferent.py                            # Inference script
-├── requirements.txt                       # Required Python packages
+├── app.py                                 # App script
 ├── train.ipynb                            # Training Jupyter notebook
+├── requirements.txt                       # Required Python packages 
 ├── README.md                              # Project documentation
 ```
 
@@ -64,7 +65,7 @@ run train.ipynb
 
 5. **Run the recognition system**
 ```bash
-python inference.py
+python app.py
 ```
 
 ## How It Works
@@ -81,6 +82,11 @@ python inference.py
 - **Sentence Formation**:  
   - If no hand is detected for 0.5 to 1 second, a space is inserted after the current word.  
   - This allows the system to build complete Vietnamese sentences.  
+
+-**Some other functions**:
+  - Delete the last character of the recognized sentence
+  - Delete all recognized sentences
+  - Save the recognized sentence to file
 
 ## Contact
 
