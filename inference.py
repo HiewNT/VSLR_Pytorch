@@ -1,4 +1,3 @@
-# inference.py
 import cv2
 import math
 import numpy as np
@@ -79,14 +78,18 @@ def inference(args, app):
                         n = args.image_size / h
                         wCal = math.ceil(n * w)
                         imgResize = cv2.resize(imgCrop, (wCal, args.image_size))
+                        if wCal > args.image_size:
+                            imgResize = imgResize[:, :args.image_size]  # Cắt nếu vượt quá
                         wGap = math.ceil((args.image_size - wCal) / 2)
-                        imgWhite[:, wGap:wCal + wGap] = imgResize
+                        imgWhite[:, wGap:wGap + imgResize.shape[1]] = imgResize
                     else:
                         n = args.image_size / w
                         hCal = math.ceil(n * h)
                         imgResize = cv2.resize(imgCrop, (args.image_size, hCal))
+                        if hCal > args.image_size:
+                            imgResize = imgResize[:args.image_size, :]  # Cắt nếu vượt quá
                         hGap = math.ceil((args.image_size - hCal) / 2)
-                        imgWhite[hGap:hCal + hGap, :] = imgResize
+                        imgWhite[hGap:hGap + imgResize.shape[0], :] = imgResize
 
                     results, index = classifier.prediction(imgWhite)
                     prediction.append(np.argmax(results))

@@ -83,7 +83,7 @@ python app.py
   - If no hand is detected for 0.5 to 1 second, a space is inserted after the current word.  
   - This allows the system to build complete Vietnamese sentences.  
 
--**Some other functions**:
+- **Some other functions**:
   - Delete the last character of the recognized sentence
   - Delete all recognized sentences
   - Save the recognized sentence to file

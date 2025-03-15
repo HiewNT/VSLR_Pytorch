@@ -30,7 +30,7 @@ class SignLanguageApp:
         self.text_label = tk.Label(self.text_frame, text="Ký tự nhận diện:", font=("Arial", 16))
         self.text_label.pack(anchor="n")
 
-        self.recognized_text = tk.Label(self.text_frame, text="", font=("Arial", 20), wraplength=300, justify="left")
+        self.recognized_text = tk.Label(self.text_frame, text="", font=("Arial", 18), wraplength=600, justify="left")
         self.recognized_text.pack(expand=True, anchor="w")
 
         # Phần nút ở dưới cùng
@@ -46,7 +46,7 @@ class SignLanguageApp:
         self.clear_button.pack(side=tk.LEFT, padx=5)
 
         # Nút Lưu Vào File Văn Bản
-        self.save_button = tk.Button(self.control_frame, text="Lưu Vào File Văn Bản", bg="green", fg="white", command=self.save_text, font=("Arial", 16), width=15, height=1)
+        self.save_button = tk.Button(self.control_frame, text="Lưu Vào File", bg="green", fg="white", command=self.save_text, font=("Arial", 16), width=15, height=1)
         self.save_button.pack(side=tk.LEFT, padx=5)
 
         # Nút Thoát
