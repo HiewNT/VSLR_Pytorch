@@ -13,14 +13,17 @@
 This project aims to develop a system for recognizing and interpreting Vietnamese Sign Language (VSL) using machine learning and computer vision techniques. Built with PyTorch, the system leverages real-time hand tracking and gesture recognition to facilitate communication between the deaf community and non-signers in Vietnam.
 
 ## Features
-- **Real-time sign language recognition**: Processes continuous video input from a webcam or pre-recorded video.  
-- **Support for Vietnamese characters**: Recognizes a wide range of VSL gestures, including special Vietnamese characters (Ă, Â, Ê, Ô, Ơ, Ư).  
+- **Real-time sign language recognition**: 
+  - Processes continuous video input from a webcam or pre-recorded video.  
+- **Support for Vietnamese characters**: 
+  - Recognizes a wide range of VSL gestures, including special Vietnamese characters (Ă, Â, Ê, Ô, Ơ, Ư).  
 - **Smart character filtering**:  
   - Consecutive images with the same character are filtered to keep only the first occurrence, avoiding duplicate characters.  
   - Special characters are detected using two-step gestures (e.g., "A" followed by "dấu mũ" becomes "Â").  
 - **Word and sentence formation**:  
   - If no hand is detected for 0.5 to 1 second, a space is added to separate words, forming complete Vietnamese sentences.  
-- **User-friendly interface**: Designed to be accessible for both developers and end-users.
+- **User-friendly interface**: 
+  - Designed to be accessible for both developers and end-users.
 
 ## Project Structure
 ```bash

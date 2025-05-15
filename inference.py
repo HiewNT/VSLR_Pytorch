@@ -114,6 +114,10 @@ def inference(args, app):
                                 valid_before = {
                                     "Mu": ["A", "E", "O"], "Munguoc": ["A"], "Rau": ["U", "O"]
                                 }
+                                
+                                # Nếu từ trước là "Ư" và ký tự hiện tại là "U", cho phép nối tiếp thành "ƯU"
+                                if last_char == "Ư" and mapped_character == "U":
+                                    current_word += "U"
                                 if mapped_character == "Mu" and last_char not in valid_before["Mu"]:
                                     pass
                                 elif mapped_character == "Munguoc" and last_char not in valid_before["Munguoc"]:

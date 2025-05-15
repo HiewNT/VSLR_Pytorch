@@ -1,0 +1,29 @@
+#webcam {
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    border-radius: 1vw;
+}
+
+#processed-frame {
+    width: 40%; /* Chiếm toàn bộ chiều rộng của left-panel */
+    height: auto;
+    border: 0.2vw solid #ccc;
+    border-radius: 0.8vw;
+    background-color: #fff;
+    margin-top: 1vh; /* Khoảng cách nhỏ với webcam nếu hiển thị */
+}
+
+/* Tăng cỡ chữ và căn trái cho recognized-text */
+.recognized-text {
+    font-size: 1.5rem; /* Tăng từ 24px (1.5rem) lên ~28px */
+    text-align: left;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.8vw;
+    padding: 0.5vw;
+}
+
+/* Đảm bảo span bên trong cũng có cỡ chữ lớn */
+#recognized-text {
+    font-size: inherit; /* Kế thừa từ recognized-text */
+}
